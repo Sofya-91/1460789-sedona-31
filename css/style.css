@@ -47,8 +47,8 @@
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-size: 14;
-  line height: 21;
+  font-size: 14px;
+  line-height: 21px;
   font-weight: 700;
   color: var(--basic-black);
   background-color: var(--basic-white);
@@ -140,7 +140,7 @@
   list-style: none;
 }
 .line-features span {
-  weight: 400;
+  font-weight: 400;
   color: var(--basic-grey);
 }
 
@@ -150,7 +150,7 @@
 
 .interest h2 {
   font-size: 30px;
-  line height: 24px;
+  line-height: 24px;
   text-align: center;
 }
 .appointment-info {
@@ -161,7 +161,7 @@
 }
 .find {
   font-size: 21px;
-  line height: 26px;
+  line-height: 26px;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-brown);
@@ -182,7 +182,7 @@
 }
 .search {
   font-size: 21px;
-  line height: 26px;
+  line-height: 26px;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-blue);
