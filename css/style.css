@@ -209,6 +209,12 @@
   color:inherit;
   text-decoration: none;
 }
+.contacts-phone {
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+}
+
 .footer-social {
   list-style: none;
   text-align: center;
@@ -229,4 +235,139 @@ color: inherit;
 
 .footer-copyright {
   text-align: right;
+}
+a.active {
+  color: var(--basic-brown);
+}
+
+/*filters*/
+.filters h2 {
+  visibility: hidden;
+}
+
+.filter {
+  color: var(--basic-white);
+  background-image: url(../img/background-catalog.jpg);
+}
+
+.infrastructure,
+.kind {
+  font-size: 16px;
+  line-height: 21px;
+}
+.filter-option,
+.filter-checkbox {
+  color: var(--basic-white);
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+.cost {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price {
+  font-size: 14px;
+
+}
+
+.show {
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: inherit;
+  text-align: center;
+}
+
+/*results*/
+
+.found {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-nav,
+.switch-nav,
+.home-list {
+  list-style: none;
+}
+
+.sorting-nav a {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+  opacity: 30%;
+  border-bottom: 1px dashed #81B3D2;
+}
+
+.sorting-nav a:hover {
+  color: var(--basic-blue);
+}
+
+.sorting-nav a:active {
+  color: var(--basic-black);
+}
+
+.sorting-nav-current {
+  color: var(--basic-blue);
+  border-bottom: none;
+}
+
+.home-item a {
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+}
+.home-item h3 {
+  color: var(--basic-black);
+}
+
+.home-item h3:hover {
+  color: var(--basic-blue);
+}
+
+.home-item h3:active {
+  color: var(--basic-black);
+  opacity: 30%;
+}
+
+.home-item-var span {
+  color: var(--basic-grey);
+  font-weight: 400;
+}
+
+a.detailed {
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+a.detailed:hover {
+  background-color: var(--blue-hover);
+}
+a.detailed:active {
+  background-color: var(--blue-active);
+}
+
+a.reservation {
+  color: var(--basic-white);
+  background-color: var(--basic-brown);
+}
+
+a.reservation:hover {
+  color: var(--basic-white);
+  background-color: var(--brown-hover);
+}
+a.reservation:active {
+  color: var(--basic-white);
+  background-color: var(--brown-active);
+}
+.raiting-star {
+  font-weight: 400;
+  color: var(--dull-grey);
+  background-color: var(--platina-grey);
 }
