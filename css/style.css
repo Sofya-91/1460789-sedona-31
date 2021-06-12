@@ -7,7 +7,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans";
   src:
        url(../fonts/PTSans-Bold.woff2) format("woff2"),
        url(../fonts/PTSans-Bold.woff) format("woff");
@@ -43,7 +43,7 @@
 }
 
 .page-body {
-  font-family: "PT Sans-Bold", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   min-width: 1200px;
   margin: 0;
   padding: 0;
@@ -67,6 +67,7 @@
 .site-navigation a {
   text-decoration: none;
   color: var(--basic-black);
+  line-height: 26px;
 }
 
 .site-navigation a:hover {
@@ -87,7 +88,7 @@
   visibility: hidden;
 }
 .welcome {
-  background-image: url(../img/background-index.jpg);
+  background: var(--basic-blue) url(../img/background-index.jpg) no-repeat center;
 }
 
 .features {
@@ -107,6 +108,7 @@
 }
 .features p {
   line-height: 26px;
+  font-weight: 400;
   text-align: center;
   color: var(--basic-grey);
 }
@@ -114,7 +116,10 @@
  color: var(--basic-white);
  background-color: var(--basic-blue);
 }
+.features-color h3 {
+  font-size: 21px;
 
+}
 .features-color span {
   font-size: 14px;
   font-weight: 400;
@@ -129,12 +134,15 @@
 .mini-list {
   list-style: none;
 }
-.features-detail-item {
-  font-size: 21px;
-}
 
+
+.features-detail-item h4 {
+  font-size: 21px;
+  line-height: 21px;
+}
 .features-detail-item p {
   font-size: 14px;
+  font-weight: 400;
 }
 .line-features {
   list-style: none;
@@ -147,15 +155,24 @@
 .line-features-item {
   background-color: var(--light-grey);
 }
+.line-features-item p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
 
+.line-features-item h3 {
+  font-size: 21px;
+  line-height: 21px;
+}
 .interest h2 {
   font-size: 30px;
   line-height: 24px;
   text-align: center;
 }
 .appointment-info {
-  font-size: 21px;
   line-height: 24px;
+  font-weight: 400;
   text-align: center;
 
 }
@@ -183,6 +200,7 @@
 .search {
   font-size: 21px;
   line-height: 26px;
+  font-weight: 700;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-blue);
@@ -201,6 +219,10 @@
 }
 .main-footer {
   min-width: 1200px;
+}
+.footer-contacts {
+  font-size: 21px;
+  line-height: 26px;
 }
 .footer-contacts a{
   font-size: 21px;
@@ -247,20 +269,20 @@ a.active {
 
 .filter {
   color: var(--basic-white);
-  background-image: url(../img/background-catalog.jpg);
+  background: var(--basic-blue) url(../img/background-catalog.jpg) no-repeat center;
 }
 
-.infrastructure,
-.kind {
-  font-size: 16px;
-  line-height: 21px;
-}
 .filter-option,
 .filter-checkbox {
   color: var(--basic-white);
   list-style: none;
   font-size: 14px;
   font-weight: 400;
+}
+.infrastructure,
+.kind {
+  font-size: 16px;
+  line-height: 21px;
 }
 .cost {
   font-size: 16px;
@@ -280,16 +302,16 @@ a.active {
 }
 
 /*results*/
-
-.found {
+.content h2 {
   font-size: 21px;
-  line-height: 26px;
+  line-height: 26px; 
 }
-
-.sorting {
+.content p {
   font-size: 12px;
   line-height: 18px;
-}
+  font-weight: 400;
+} 
+
 
 .sorting-nav,
 .switch-nav,
@@ -320,11 +342,13 @@ a.active {
 }
 
 .home-item a {
-  font-size: 14px;
-  line-height: 21px;
   text-decoration: none;
 }
+
 .home-item h3 {
+  font-size: 21px;
+  line-height: 26px;
+  text-decoration: none;
   color: var(--basic-black);
 }
 
@@ -341,31 +365,35 @@ a.active {
   color: var(--basic-grey);
   font-weight: 400;
 }
-
-a.detailed {
+.detailed {
+  font-size: 14px;
+  line-height: 21px;
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
-a.detailed:hover {
+
+.detailed:hover {
   background-color: var(--blue-hover);
 }
-a.detailed:active {
+.detailed:active {
   background-color: var(--blue-active);
 }
-
-a.reservation {
+.reservation {
+  font-size: 14px;
+  line-height: 21px;
   color: var(--basic-white);
   background-color: var(--basic-brown);
 }
 
-a.reservation:hover {
+.reservation:hover {
   color: var(--basic-white);
   background-color: var(--brown-hover);
 }
-a.reservation:active {
+.reservation:active {
   color: var(--basic-white);
   background-color: var(--brown-active);
 }
+
 .raiting-star {
   font-weight: 400;
   color: var(--dull-grey);
