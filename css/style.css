@@ -41,10 +41,16 @@
 
   --silver-grey: #BDBBBC;
 }
-
+.page {
+  height: 100%;
+}
 .page-body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   font-family: "PT Sans", Arial, sans-serif;
   min-width: 1200px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -55,13 +61,23 @@
   text-transform: uppercase;
 }
 .main-header {
-  width: 1200px;
-  height: 56px;
-  text-decoration: none;
-  background-color: var(--basic-white);
+  margin: 0;
 }
+.main-navigation {
+  display: grid;
+
+}
+.logo {
+  justify-self: center;
+  z-index: 1;
+}
+
 .site-navigation {
   list-style: none;
+  display: grid;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .site-navigation a {
@@ -71,24 +87,34 @@
 }
 
 .site-navigation a:hover {
-  color: var(--basic-blue)
+  color: var(--basic-blue);
 }
 .site-navigation a:focus {
   opacity: 30%;
 }
 .site-navigation a:active {
-  color: var(--basic-brown)
+  color: var(--basic-brown);
 }
 
 .container {
   width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
 
 }
 .welcome h1 {
   visibility: hidden;
 }
 .welcome {
+  height: 509px;
   background: var(--basic-blue) url(../img/background-index.jpg) no-repeat center;
+}
+.welcome-to-sedona {
+  margin-top: 76px;
+  margin-bottom: 76px;
+  margin-left: 372px;
+  justify-self: center;
+
 }
 
 .features {
@@ -98,6 +124,8 @@
 
 .features-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 
 }
 
@@ -112,19 +140,25 @@
   text-align: center;
   color: var(--basic-grey);
 }
-.features-color {
- color: var(--basic-white);
- background-color: var(--basic-blue);
+
+.features-color-block {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
-.features-color h3 {
+.features-color {
+  text-align: center;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+.features-color-text h3 {
   font-size: 21px;
 
 }
-.features-color span {
+.features-color-text span {
   font-size: 14px;
   font-weight: 400;
 }
-.features-color p {
+.features-color-text p {
   font-size: 14px;
   color: var(--basic-white);
   font-weight: 400;
@@ -132,11 +166,16 @@
 
 
 .mini-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
 .features-detail-item h4 {
+  text-align: center;
   font-size: 21px;
   line-height: 21px;
 }
@@ -145,9 +184,14 @@
   font-weight: 400;
 }
 .line-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .line-features span {
+  text-align: center;
   font-weight: 400;
   color: var(--basic-grey);
 }
@@ -156,18 +200,28 @@
   background-color: var(--light-grey);
 }
 .line-features-item p {
+  text-align: center;
+  margin: 0 77px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
 
 .line-features-item h3 {
+  text-align: center;
   font-size: 21px;
   line-height: 21px;
+}
+.line-features-item span {
+  text-align: center;
 }
 .interest h2 {
   font-size: 30px;
   line-height: 24px;
+  text-align: center;
+}
+
+.form {
   text-align: center;
 }
 .appointment-info {
@@ -179,6 +233,9 @@
 .find {
   font-size: 21px;
   line-height: 26px;
+  width: 568px;
+  height: 86px;
+  margin-left: 356px;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-brown);
@@ -219,10 +276,15 @@
 }
 .main-footer {
   min-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  padding: 0;
 }
 .footer-contacts {
   font-size: 21px;
   line-height: 26px;
+  justify-self: center;
 }
 .footer-contacts a{
   font-size: 21px;
@@ -238,6 +300,11 @@
 }
 
 .footer-social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  padding: 0;
+  grid-column-gap: 6px;
   list-style: none;
   text-align: center;
 }
@@ -257,6 +324,7 @@ color: inherit;
 
 .footer-copyright {
   text-align: right;
+  justify-self: center;
 }
 a.active {
   color: var(--basic-brown);
@@ -304,13 +372,13 @@ a.active {
 /*results*/
 .content h2 {
   font-size: 21px;
-  line-height: 26px; 
+  line-height: 26px;
 }
 .content p {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-} 
+}
 
 
 .sorting-nav,
