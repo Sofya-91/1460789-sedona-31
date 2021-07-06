@@ -41,6 +41,12 @@
 
   --silver-grey: #BDBBBC;
 }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 .page {
   height: 100%;
 }
@@ -49,9 +55,8 @@
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   font-family: "PT Sans", Arial, sans-serif;
-  min-width: 1200px;
   min-height: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-size: 14px;
   line-height: 21px;
@@ -59,22 +64,27 @@
   color: var(--basic-black);
   background-color: var(--basic-white);
   text-transform: uppercase;
+  box-shadow: 0px 5px 15px var(--basic-black);
+
 }
 .main-header {
   margin: 0;
+  padding: 0;
 }
 .main-navigation {
   display: grid;
-
 }
 .logo {
   justify-self: center;
-  z-index: 1;
+  width: 138px;
+  height: 70px;
+  margin-bottom: -15px;
 }
 
 .site-navigation {
   list-style: none;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   width: 1200px;
   margin: 0 auto;
   padding: 0;
@@ -84,6 +94,7 @@
   text-decoration: none;
   color: var(--basic-black);
   line-height: 26px;
+
 }
 
 .site-navigation a:hover {
@@ -107,7 +118,13 @@
 }
 .welcome {
   height: 509px;
-  background: var(--basic-blue) url(../img/background-index.jpg) no-repeat center;
+  background-color: var(--basic-blue);
+  background-image: url(../img/shape.png), url(../img/background-index.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-bottom: 42px;
+  min-width: 1200px;
+  min-height: 509px;
 }
 .welcome-to-sedona {
   margin-top: 76px;
@@ -119,14 +136,12 @@
 
 .features {
   min-width: 1200px;
-
 }
 
 .features-list {
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 .features h2 {
@@ -173,7 +188,9 @@
   padding: 0;
 }
 
-
+.features-detail-item {
+  height: 330px;
+}
 .features-detail-item h4 {
   text-align: center;
   font-size: 21px;
@@ -189,8 +206,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
 }
 .line-features span {
+  display: block;
   text-align: center;
   font-weight: 400;
   color: var(--basic-grey);
@@ -198,6 +217,7 @@
 
 .line-features-item {
   background-color: var(--light-grey);
+  height: 256px;
 }
 .line-features-item p {
   text-align: center;
@@ -211,9 +231,13 @@
   text-align: center;
   font-size: 21px;
   line-height: 21px;
+  margin: 0;
 }
 .line-features-item span {
   text-align: center;
+}
+.interest {
+  width: 1200px;
 }
 .interest h2 {
   font-size: 30px;
@@ -222,20 +246,48 @@
 }
 
 .form {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  width: 568px;
+  height: 395px;
+  margin: 0 316px;
+  padding: 55px;
+  background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px var(--basic-black);
+}
+.appointment-form {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
 }
 .appointment-info {
   line-height: 24px;
   font-weight: 400;
   text-align: center;
+  padding-left: 383px;
+  padding-right: 383px;
+}
+.appointment-item input:nth-child(1),
+.appointment-item input:nth-child(2) {
+  width: 346px;
+}
 
+.appointment-item label {
+  padding-right: 10px;
+}
+.appointment-item input:nth-child(3),
+.appointment-item input:nth-child(4) {
+  width: 114px;
 }
 .find {
   font-size: 21px;
   line-height: 26px;
   width: 568px;
   height: 86px;
-  margin-left: 356px;
+  margin-left: 316px;
+  margin-bottom: 0;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-brown);
@@ -251,8 +303,10 @@
   background-color: var(--brown-active);
 }
 
+
 .appointment-item {
   line-height: 26px;
+
 }
 .search {
   font-size: 21px;
@@ -358,7 +412,7 @@ a.active {
 /*filters*/
 
 .filters {
-  display: grid;
+  display: flex;
   width: 1200px;
   margin: 0 auto;
   padding: 0;
@@ -368,6 +422,7 @@ a.active {
 }
 
 .filter {
+  display: flex;
   color: var(--basic-white);
   background: var(--basic-blue) url(../img/background-catalog.jpg) no-repeat center;
   width: 1200px;

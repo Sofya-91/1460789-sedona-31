@@ -19,9 +19,9 @@
         <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип сайта Седона»">
       </a>
       <ul class="site-navigation">
-        <li><a href="blank.html">Информация</a></li>
-        <li><a href="blank.html">Фото и видео</a></li>
-        <li><a href="blank.html">Карта штата</a></li>
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
         <li><a href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
@@ -99,30 +99,31 @@
     <section class="appointment">
       <div class="interest">
         <h2>Заинтересовались?</h2>
-        <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
+        <p class="appointment-info">Укажите предполагаемые даты поездки,<br /> и мы покажем вам лучшие предложения
+          гостиниц в
           седоне</p>
         <p class="find">ПОИСК ГОСТИНИЦЫ В седоне</p>
       </div>
       <div class="form">
         <form class="appointment-form" action="https://htmlacademy.ru/intensive/htmlcss" method="get">
-          <p class="appointment-item">
+          <div class="appointment-item">
             <label for="appointment-date">Дата заезда</label>
             <input id="appointment-date" type="text" name="date" placeholder="24 апреля 2017">
-            <input class="icon-date">
-          </p>
-          <p class="appointment-item">
+            <!--<input class="icon-date"> пока удалила временно-->
+          </div>
+          <div class="appointment-item">
             <label for="departure-date">Дата выезда</label>
             <input id="departure-date" type="text" name="date" placeholder="4 июля 2017">
-            <input class="icon-date">
-          </p>
-          <p class="appointment-item">
+            <!--<input class="icon-date">-->
+          </div>
+          <div class="appointment-item">
             <label for="adults"> Взрослые:</label>
             <input id="adults" type="text" name="adults" placeholder="2">
-          </p>
-          <p class="appointment-item">
+          </div>
+          <div class="appointment-item">
             <label for="kids"> Дети:</label>
             <input id="kids" type="text" name="kids" placeholder="0">
-          </p>
+          </div>
           <button class="search" type="submit" name="search">Найти</button>
         </form>
       </div>
