@@ -57,28 +57,37 @@
   font-family: "PT Sans", Arial, sans-serif;
   min-height: 100%;
   margin: 0 auto;
+  position: relative;
   padding: 0;
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
   color: var(--basic-black);
-  background-color: var(--basic-white);
+  background-color: var(--platina-grey);
   text-transform: uppercase;
-  box-shadow: 0px 5px 15px var(--basic-black);
 
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 .main-header {
   margin: 0;
   padding: 0;
+  max-width: 1200px;
 }
 .main-navigation {
   display: grid;
 }
 .logo {
-  justify-self: center;
+  position: absolute;
   width: 138px;
-  height: 70px;
-  margin-bottom: -15px;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .site-navigation {
@@ -86,6 +95,7 @@
   display: flex;
   justify-content: space-between;
   width: 1200px;
+
   margin: 0 auto;
   padding: 0;
 }
@@ -108,9 +118,9 @@
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0;
 
 }
 .welcome h1 {
@@ -255,7 +265,7 @@
   margin: 0 316px;
   padding: 55px;
   background-color: var(--basic-white);
-  box-shadow: 0px 5px 15px var(--basic-black);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 .appointment-form {
   display: flex;
@@ -274,12 +284,22 @@
   width: 346px;
 }
 
-.appointment-item label {
+.label-appointment {
+  width: 122px;
+  padding-right: 10px;
+}
+
+
+/*.appointment-item label {
   padding-right: 10px;
 }
 .appointment-item input:nth-child(3),
 .appointment-item input:nth-child(4) {
   width: 114px;
+}*/
+
+.map {
+  width: 1200px;
 }
 .find {
   font-size: 21px;
@@ -329,11 +349,16 @@
   background-color: var(--blue-active);
 }
 .main-footer {
-  min-width: 1200px;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
   padding: 0;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .footer-contacts {
   font-size: 21px;
@@ -389,9 +414,9 @@ a.active {
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   font-family: "PT Sans", Arial, sans-serif;
-  min-width: 1200px;
   min-height: 100%;
-  margin: 0;
+  margin: 0 auto;
+  position: relative;
   padding: 0;
   font-size: 14px;
   line-height: 21px;
@@ -399,15 +424,19 @@ a.active {
   color: var(--basic-black);
   background-color: var(--basic-white);
   text-transform: uppercase;
-  height: 100%;
 }
+
 
 .catalog-container {
-  display: grid;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0;
+}
+/*заменила
+display: grid;
   grid-template-rows: 217px 1fr;
   align-content: start;
-
-}
+*/
 
 /*filters*/
 
@@ -417,12 +446,15 @@ a.active {
   margin: 0 auto;
   padding: 0;
 }
+
 .filters h2 {
   visibility: hidden;
+  max-width: 0;
 }
 
 .filter {
   display: flex;
+  flex-wrap: wrap;
   color: var(--basic-white);
   background: var(--basic-blue) url(../img/background-catalog.jpg) no-repeat center;
   width: 1200px;
@@ -437,27 +469,62 @@ a.active {
   list-style: none;
   font-size: 14px;
   font-weight: 400;
+  margin-top: 25px;
 }
-.infrastructure,
+.infrastructure {
+  font-size: 16px;
+  line-height: 21px;
+  margin-left: 72px;
+
+}
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-top: 27px;
+  padding: 0;
+  border: none;
+}
+.infrastructure-list {
+  margin-left: 72px;
+  padding: 0;
+}
 .kind {
   font-size: 16px;
   line-height: 21px;
+  margin-left: 119px;
+
+}
+.kind-list {
+  margin-left: 119px;
+  padding: 0;
 }
 .cost {
   font-size: 16px;
   line-height: 21px;
+  margin-left: 363px;
 }
 
 .price {
   font-size: 14px;
 
-}
 
+}
+.price-day {
+  display: flex;
+  flex-wrap: wrap;
+  height: 217px;
+  flex-direction: column;
+}
 .show {
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: inherit;
   text-align: center;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid var(--basic-white);
+  width: 137px;
+  height: 36px;
 }
 
 /*results*/
@@ -477,19 +544,41 @@ a.active {
   font-weight: 400;
 }
 
+.find-container {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 73px;
 
+}
+.sorting {
+  margin-left: 46px;
+}
+.sorting-nav{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
+}
 .sorting-nav,
 .switch-nav,
 .home-list {
   list-style: none;
 }
 
+.home-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+}
 .sorting-nav a {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
   color: var(--basic-black);
   opacity: 30%;
+  margin: 0;
+  margin-right: 33px;
   border-bottom: 1px dashed #81B3D2;
 }
 
@@ -505,7 +594,21 @@ a.active {
   color: var(--basic-blue);
   border-bottom: none;
 }
-
+.home-item {
+  display: flex;
+  width: 1200px;
+  height: 150px;
+  list-style: none;
+  border-bottom: 1px solid var(--grey-focus);
+}
+.photo-hotel {
+  margin-top: 30px;
+  margin-left: 73px;
+  margin-right: 29px;
+}
+.hotel {
+  margin-bottom: 30px;
+}
 .home-item a {
   text-decoration: none;
 }
@@ -515,6 +618,8 @@ a.active {
   line-height: 26px;
   text-decoration: none;
   color: var(--basic-black);
+  margin-top: 24px;
+  margin-bottom: 8px;
 }
 
 .home-item h3:hover {
@@ -526,15 +631,20 @@ a.active {
   opacity: 30%;
 }
 
+.home-item-var {
+  margin-bottom: 16px;
+}
 .home-item-var span {
   color: var(--basic-grey);
   font-weight: 400;
+
 }
 .detailed {
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-white);
   background-color: var(--basic-blue);
+  margin: 0px;
 }
 
 .detailed:hover {
@@ -559,6 +669,11 @@ a.active {
   background-color: var(--brown-active);
 }
 
+.star {
+  margin-left: auto;
+  margin-right: 72px;
+  margin-top: 30px;
+}
 .raiting-star {
   font-weight: 400;
   color: var(--dull-grey);
